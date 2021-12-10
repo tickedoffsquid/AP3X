@@ -10,7 +10,7 @@ module.exports = {
 	async execute(interaction, client) {
         const helpEmbed = new MessageEmbed()
 	        .setColor('#0099ff')
-	        .setTitle('Help')
+	        .setTitle('Help Menu')
 	        .setAuthor(interaction.user.username, interaction.user.displayAvatarURL({format: 'png'}))
 	        .addFields(
 		        { name: '/help', value: `Displays the list of commands.` },
