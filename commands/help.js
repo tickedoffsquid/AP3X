@@ -15,7 +15,7 @@ module.exports = {
 	        .addFields(
 		        { name: '/help', value: `Displays the list of commands.` },
                 { name: '/avatar <user>', value: `Displays the avatar of the user, returns yours if none is sent.`},
-                { name : '/add <number, infinite, seperated by spaces.>', value: `Returns the sum of the given numbers`},
+                { name : '/add <numbers seperated by spaces>', value: `Returns the sum of the given numbers`},
                 { name: "/ping", value: `Sends the bot latency (speed/ping) in milliseconds`},
                 { name: "/purge <number up to 99>", value: `Removes a given number of messages`},
                 { name: "/say <message>", value: "Makes the bot say a message!"},
