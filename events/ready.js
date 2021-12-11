@@ -1,7 +1,19 @@
+const mongo = require('../mongo.js');
+
 module.exports = {
 	name: 'ready',
 	once: true,
 	execute(client) {
+        async function mongoEx()  {
+            await mongo().then(mongoose => {
+                try {
+                    console.log('Connected to mongo!');
+                }
+                finally {
+                    mongoose.connection.close();
+                }
+            })
+        }
         const date = new Date();
   
         const formatData = (input) => {
@@ -34,5 +46,6 @@ module.exports = {
 		console.log(`Bot went up at ${message}, Logged in as ${client.user.tag}`);
         const channelSendId = client.channels.cache.get("917568748729286657");
         channelSendId.send(`Bot went up at ${message}, Logged in as ${client.user.tag}`);
+        mongoEx();
 	},
 };
